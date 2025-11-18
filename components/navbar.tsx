@@ -45,13 +45,13 @@ export function NavBar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <Link href="/">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="font-playfair text-2xl lg:text-3xl font-bold text-cc-blue-royal cursor-pointer"
+              className="font-playfair text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-cc-blue-royal cursor-pointer truncate max-w-[200px] sm:max-w-none"
             >
               The Comeback Code
             </motion.div>
@@ -98,8 +98,9 @@ export function NavBar() {
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden"
+            className="lg:hidden min-w-[44px] min-h-[44px]"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>

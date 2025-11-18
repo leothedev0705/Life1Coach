@@ -21,11 +21,11 @@ const buttonVariants = cva(
         glass: "glass-effect text-amethyst-700 hover:bg-white/60 backdrop-blur-lg border border-white/30"
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        xl: "h-14 rounded-2xl px-12 text-lg font-semibold",
-        icon: "h-10 w-10",
+        default: "h-10 sm:h-10 px-4 py-2 min-h-[44px] sm:min-h-[40px]",
+        sm: "h-9 sm:h-9 rounded-md px-3 min-h-[44px] sm:min-h-[36px]",
+        lg: "h-11 sm:h-11 rounded-md px-6 sm:px-8 min-h-[48px] sm:min-h-[44px] text-sm sm:text-base",
+        xl: "h-14 sm:h-14 rounded-2xl px-6 sm:px-12 text-base sm:text-lg font-semibold min-h-[56px] sm:min-h-[56px]",
+        icon: "h-10 w-10 sm:h-10 sm:w-10 min-h-[44px] min-w-[44px] sm:min-h-[40px] sm:min-w-[40px]",
       },
     },
     defaultVariants: {

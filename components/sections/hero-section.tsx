@@ -10,10 +10,20 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-lavender-50 to-white overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden"
     >
-      {/* Background Elements */}
+      {/* Background Image */}
       <div className="absolute inset-0">
+        <Image
+          src="/assets/photos/main.jpg"
+          alt="The Comeback Code - Empowering Professionals"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-amethyst-600/80 via-amethyst-500/70 to-rose-400/80" />
         {/* Floating Shapes */}
         <motion.div
           animate={{
@@ -25,7 +35,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute top-20 left-20 w-32 h-32 bg-amethyst-200/30 rounded-full blur-xl"
+          className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -37,7 +47,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute bottom-20 right-20 w-48 h-48 bg-rose-200/30 rounded-full blur-xl"
+          className="absolute bottom-20 right-20 w-48 h-48 bg-white/10 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -49,138 +59,115 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/2 right-1/4 w-24 h-24 bg-amethyst-300/40 rounded-full blur-lg"
+          className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/10 rounded-full blur-lg"
         />
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image Side */}
-          <Reveal>
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative">
-                <Image
-                  src="/assets/photos/main.jpg"
-                  alt="The Comeback Code - Empowering Professionals"
-                  fill
-                  className="object-cover"
-                  priority
-                  quality={90}
-                />
-              </div>
-            </motion.div>
-          </Reveal>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20 sm:py-24">
+        <Reveal>
+          <motion.h1 
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-playfair font-bold text-slate-800 mb-4 sm:mb-6 px-2"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <span className="text-gradient break-words">The Comeback Code</span>
+            <br />
+            <span className="text-slate-700 break-words">Empowering Professionals</span>
+          </motion.h1>
+        </Reveal>
 
-          {/* Content Side */}
-          <div className="text-center lg:text-left">
-            <Reveal>
-              <motion.h1 
-                className="text-5xl md:text-7xl font-playfair font-bold text-slate-800 mb-6"
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+        <Reveal delay={0.4}>
+          <motion.p 
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <span className="block sm:inline">Confidence</span> <span className="hidden sm:inline">|</span> <span className="block sm:inline">Growth</span> <span className="hidden sm:inline">|</span> <span className="block sm:inline">Success</span>
+            <br />
+            <span className="text-sm sm:text-base lg:text-lg text-slate-500 mt-2 block px-2">
+              Rediscover your professional power and excel in your career comeback journey.
+            </span>
+          </motion.p>
+        </Reveal>
+
+        <Reveal delay={0.6}>
+          <motion.div
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <Link href="/programs" className="w-full sm:w-auto">
+              <Button 
+                variant="gradient" 
+                size="xl"
+                className="group w-full sm:w-auto min-h-[48px] text-sm sm:text-base"
               >
-                <span className="text-gradient">The Comeback Code</span>
-                <br />
-                <span className="text-slate-700">Empowering Professionals</span>
-              </motion.h1>
-            </Reveal>
-
-            <Reveal delay={0.4}>
-              <motion.p 
-                className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                <span className="mr-2 break-words">Start Your Comeback Journey</span>
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                  className="hidden sm:inline"
+                >
+                  →
+                </motion.span>
+              </Button>
+            </Link>
+            <Link href="/about" className="w-full sm:w-auto">
+              <Button 
+                variant="glass" 
+                size="xl"
+                className="w-full sm:w-auto min-h-[48px] text-sm sm:text-base"
               >
-                Confidence | Growth | Success
-                <br />
-                <span className="text-lg text-slate-500 mt-2 block">
-                  Rediscover your professional power and excel in your career comeback journey.
-                </span>
-              </motion.p>
-            </Reveal>
+                Learn More
+              </Button>
+            </Link>
+          </motion.div>
+        </Reveal>
 
-            <Reveal delay={0.6}>
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-              >
-                <Link href="/programs">
-                  <Button 
-                    variant="gradient" 
-                    size="xl"
-                    className="group"
-                  >
-                    <span className="mr-2">Start Your Comeback Journey Today</span>
-                    <motion.span
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      →
-                    </motion.span>
-                  </Button>
-                </Link>
-                <Link href="/about">
-                  <Button 
-                    variant="glass" 
-                    size="xl"
-                  >
-                    Learn More
-                  </Button>
-                </Link>
-              </motion.div>
-            </Reveal>
-
-            {/* Floating Stats */}
-            <Reveal delay={1.0}>
+        {/* Floating Stats */}
+        <Reveal delay={1.0}>
+          <motion.div 
+            className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-2xl mx-auto px-4"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+          >
+            <div className="text-center">
               <motion.div 
-                className="mt-16 grid grid-cols-3 gap-6"
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-cc-blue-royal mb-1 sm:mb-2"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
               >
-                <div className="text-center">
-                  <motion.div 
-                    className="text-3xl md:text-4xl font-bold text-cc-blue-royal mb-2"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    500+
-                  </motion.div>
-                  <div className="text-cc-slate font-medium text-sm">Professionals Helped</div>
-                </div>
-                <div className="text-center">
-                  <motion.div 
-                    className="text-3xl md:text-4xl font-bold text-cc-blue-royal mb-2"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                  >
-                    20+
-                  </motion.div>
-                  <div className="text-cc-slate font-medium text-sm">Years Experience</div>
-                </div>
-                <div className="text-center">
-                  <motion.div 
-                    className="text-3xl md:text-4xl font-bold text-cc-blue-royal mb-2"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                  >
-                    15+
-                  </motion.div>
-                  <div className="text-cc-slate font-medium text-sm">Years Training</div>
-                </div>
+                500+
               </motion.div>
-            </Reveal>
-          </div>
-        </div>
+              <div className="text-xs sm:text-sm text-cc-slate font-medium">Professionals Helped</div>
+            </div>
+            <div className="text-center">
+              <motion.div 
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-cc-blue-royal mb-1 sm:mb-2"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              >
+                20+
+              </motion.div>
+              <div className="text-xs sm:text-sm text-cc-slate font-medium">Years Experience</div>
+            </div>
+            <div className="text-center col-span-2 md:col-span-1">
+              <motion.div 
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-cc-blue-royal mb-1 sm:mb-2"
+                animate={{ scale: [1, 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+              >
+                15+
+              </motion.div>
+              <div className="text-xs sm:text-sm text-cc-slate font-medium">Years Training</div>
+            </div>
+          </motion.div>
+        </Reveal>
       </div>
 
       {/* Scroll Indicator */}
