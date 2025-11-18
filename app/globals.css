@@ -140,10 +140,11 @@
   }
   
   .text-gradient {
-    background: linear-gradient(135deg, var(--cc-blue-royal) 0%, var(--cc-gold-metal) 100%);
+    background: linear-gradient(135deg, var(--cc-blue-royal) 0%, #4F46E5 50%, var(--cc-gold-metal) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(11, 61, 145, 0.1));
   }
   
   .royal-gradient {

@@ -9,46 +9,37 @@ export function HeroSection() {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-lavender-50"
     >
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amethyst-600 via-amethyst-500 to-rose-400">
-        {/* Floating Shapes */}
+      {/* Professional Background Pattern */}
+      <div className="absolute inset-0">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cc-blue-royal/5 via-transparent to-amethyst-500/5" />
+        
+        {/* Subtle geometric shapes */}
         <motion.div
           animate={{
             y: [0, -20, 0],
-            rotate: [0, 180, 360],
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl hidden sm:block"
+          className="absolute top-20 left-20 w-64 h-64 bg-cc-blue-royal/5 rounded-full blur-3xl hidden lg:block"
         />
         <motion.div
           animate={{
             y: [0, 30, 0],
-            rotate: [0, -180, -360],
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute bottom-20 right-20 w-48 h-48 bg-white/10 rounded-full blur-xl hidden sm:block"
-        />
-        <motion.div
-          animate={{
-            y: [0, -15, 0],
-            x: [0, 15, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/10 rounded-full blur-lg hidden sm:block"
+          className="absolute bottom-20 right-20 w-96 h-96 bg-amethyst-500/5 rounded-full blur-3xl hidden lg:block"
         />
       </div>
 
@@ -56,30 +47,35 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 py-20 sm:py-24">
         <Reveal>
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-playfair font-bold text-slate-800 mb-4 sm:mb-6 px-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl font-playfair font-bold mb-4 sm:mb-6 px-2 leading-tight"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <span className="text-gradient break-words">The Comeback Code</span>
+            <span className="text-gradient break-words drop-shadow-sm">The Comeback Code</span>
             <br />
-            <span className="text-slate-700 break-words">Empowering Professionals</span>
+            <span className="text-slate-900 break-words drop-shadow-sm">Empowering Professionals</span>
           </motion.h1>
         </Reveal>
 
         <Reveal delay={0.4}>
-          <motion.p 
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4"
+          <motion.div 
+            className="mb-6 sm:mb-8 max-w-3xl mx-auto px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <span className="block sm:inline">Confidence</span> <span className="hidden sm:inline">|</span> <span className="block sm:inline">Growth</span> <span className="hidden sm:inline">|</span> <span className="block sm:inline">Success</span>
-            <br />
-            <span className="text-sm sm:text-base lg:text-lg text-slate-500 mt-2 block px-2">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-slate-800 mb-4 tracking-wide">
+              <span className="block sm:inline">Confidence</span> 
+              <span className="hidden sm:inline mx-3 text-cc-blue-royal">|</span> 
+              <span className="block sm:inline">Growth</span> 
+              <span className="hidden sm:inline mx-3 text-cc-blue-royal">|</span> 
+              <span className="block sm:inline">Success</span>
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed font-medium">
               Rediscover your professional power and excel in your career comeback journey.
-            </span>
-          </motion.p>
+            </p>
+          </motion.div>
         </Reveal>
 
         <Reveal delay={0.6}>
@@ -117,43 +113,43 @@ export function HeroSection() {
           </motion.div>
         </Reveal>
 
-        {/* Floating Stats */}
+        {/* Professional Stats */}
         <Reveal delay={1.0}>
           <motion.div 
-            className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-2xl mx-auto px-4"
+            className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 max-w-3xl mx-auto px-4"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            <div className="text-center">
+            <div className="text-center bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg border border-slate-200/50">
               <motion.div 
-                className="text-2xl sm:text-3xl md:text-4xl font-bold text-cc-blue-royal mb-1 sm:mb-2"
-                animate={{ scale: [1, 1.1, 1] }}
+                className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-cc-blue-royal to-amethyst-600 bg-clip-text text-transparent mb-2"
+                animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 500+
               </motion.div>
-              <div className="text-xs sm:text-sm text-cc-slate font-medium">Professionals Helped</div>
+              <div className="text-sm sm:text-base text-slate-700 font-semibold">Professionals Helped</div>
             </div>
-            <div className="text-center">
+            <div className="text-center bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg border border-slate-200/50">
               <motion.div 
-                className="text-2xl sm:text-3xl md:text-4xl font-bold text-cc-blue-royal mb-1 sm:mb-2"
-                animate={{ scale: [1, 1.1, 1] }}
+                className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-cc-blue-royal to-amethyst-600 bg-clip-text text-transparent mb-2"
+                animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
               >
                 20+
               </motion.div>
-              <div className="text-xs sm:text-sm text-cc-slate font-medium">Years Experience</div>
+              <div className="text-sm sm:text-base text-slate-700 font-semibold">Years Experience</div>
             </div>
-            <div className="text-center col-span-2 md:col-span-1">
+            <div className="text-center col-span-2 md:col-span-1 bg-white/60 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg border border-slate-200/50">
               <motion.div 
-                className="text-2xl sm:text-3xl md:text-4xl font-bold text-cc-blue-royal mb-1 sm:mb-2"
-                animate={{ scale: [1, 1.1, 1] }}
+                className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-cc-blue-royal to-amethyst-600 bg-clip-text text-transparent mb-2"
+                animate={{ scale: [1, 1.05, 1] }}
                 transition={{ duration: 2, repeat: Infinity, delay: 1 }}
               >
                 15+
               </motion.div>
-              <div className="text-xs sm:text-sm text-cc-slate font-medium">Years Training</div>
+              <div className="text-sm sm:text-base text-slate-700 font-semibold">Years Training</div>
             </div>
           </motion.div>
         </Reveal>
@@ -161,13 +157,13 @@ export function HeroSection() {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-cc-blue-royal rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-cc-blue-royal/60 rounded-full flex justify-center backdrop-blur-sm bg-white/20">
           <motion.div
-            className="w-1 h-3 bg-cc-blue-royal rounded-full mt-2"
+            className="w-1.5 h-3 bg-cc-blue-royal rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           />
