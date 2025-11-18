@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/ui/reveal"
 
@@ -12,18 +11,8 @@ export function HeroSection() {
       id="hero" 
       className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src="/assets/photos/main.jpg"
-          alt="The Comeback Code - Empowering Professionals"
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-amethyst-600/80 via-amethyst-500/70 to-rose-400/80" />
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-amethyst-600 via-amethyst-500 to-rose-400">
         {/* Floating Shapes */}
         <motion.div
           animate={{
@@ -35,7 +24,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl"
+          className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-xl hidden sm:block"
         />
         <motion.div
           animate={{
@@ -47,7 +36,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="absolute bottom-20 right-20 w-48 h-48 bg-white/10 rounded-full blur-xl"
+          className="absolute bottom-20 right-20 w-48 h-48 bg-white/10 rounded-full blur-xl hidden sm:block"
         />
         <motion.div
           animate={{
@@ -59,7 +48,7 @@ export function HeroSection() {
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/10 rounded-full blur-lg"
+          className="absolute top-1/2 right-1/4 w-24 h-24 bg-white/10 rounded-full blur-lg hidden sm:block"
         />
       </div>
 
