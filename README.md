@@ -1,4 +1,4 @@
-# Anita D'Souza - Life & Success Coach Website
+# Life Coach Website
 
 A visually breathtaking one-page website for Anita D'Souza's life coaching business, built with modern web technologies for exceptional performance and user experience.
 
