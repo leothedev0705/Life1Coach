@@ -2,13 +2,13 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { 
-  Facebook, 
-  Instagram, 
-  Linkedin, 
-  Twitter, 
-  Mail, 
-  Phone, 
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
   MapPin,
   Heart
 } from "lucide-react"
@@ -70,23 +70,23 @@ export function Footer() {
               </motion.div>
             </Link>
             <p className="text-sm sm:text-base text-slate-400 mb-4 sm:mb-6 leading-relaxed">
-              Transforming lives through purpose-driven coaching. 
+              Transforming lives through purpose-driven coaching.
               Helping you unlock your potential and create extraordinary success.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-slate-400">
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Mail className="w-4 h-4 text-amethyst-400 flex-shrink-0" />
-                <span className="break-words">hello@anitadsouza.com</span>
+                <span className="break-words">anni25d@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Phone className="w-4 h-4 text-amethyst-400 flex-shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 7208409448</span>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <MapPin className="w-4 h-4 text-amethyst-400 flex-shrink-0" />
-                <span>San Francisco, CA</span>
+                <span>Mumbai, MH</span>
               </div>
             </div>
           </div>
@@ -180,7 +180,7 @@ export function Footer() {
               <span>for your transformation</span>
             </div>
           </div>
-          
+
           {/* Legal Links */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-4 text-xs">
             <button className="hover:text-amethyst-400 transition-colors duration-300 min-h-[44px] px-2">

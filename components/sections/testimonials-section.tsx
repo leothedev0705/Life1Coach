@@ -7,7 +7,7 @@ import { GlassCard } from "@/components/ui/glass-card"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Priya Sharma",
     role: "Marketing Executive",
     image: "👩‍💼",
     rating: 5,
@@ -15,15 +15,15 @@ const testimonials = [
     achievement: "Promoted to Director in 6 months"
   },
   {
-    name: "Michael Chen",
+    name: "Riya Gupta",
     role: "Entrepreneur",
-    image: "👨‍💼",
+    image: "👩‍💼",
     rating: 5,
-    text: "Working with Anita was a game-changer. She helped me overcome limiting beliefs and scale my business to 7 figures. Her approach is both practical and transformational.",
-    achievement: "Scaled business to $1M+ revenue"
+    text: "Working with Anita was a game-changer. She helped me overcome limiting beliefs and scale my business significantly. Her approach is both practical and transformational.",
+    achievement: "Scaled business to 8-figure revenue"
   },
   {
-    name: "Emily Rodriguez",
+    name: "Ananya Iyer",
     role: "Creative Director",
     image: "👩‍🎨",
     rating: 5,
@@ -31,20 +31,20 @@ const testimonials = [
     achievement: "Launched successful design agency"
   },
   {
-    name: "David Thompson",
+    name: "Sunita Rao",
     role: "Executive Coach",
-    image: "👨‍🏫",
+    image: "👩‍🏫",
     rating: 5,
     text: "Even as a coach myself, I needed guidance to reach the next level. Anita's mentorship helped me develop advanced skills and attract high-level clients.",
-    achievement: "Increased rates by 300%"
+    achievement: "Increased revenue by 300%"
   },
   {
-    name: "Lisa Park",
+    name: "Meera Nair",
     role: "Wellness Consultant",
     image: "👩‍⚕️",
     rating: 5,
     text: "Anita helped me transition from corporate burnout to building a thriving wellness practice. Her support was invaluable during my career pivot.",
-    achievement: "Built 6-figure wellness practice"
+    achievement: "Built successful wellness practice"
   }
 ]
 

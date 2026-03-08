@@ -140,7 +140,7 @@ export function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-cc-blue-royal focus:border-transparent outline-none transition-all"
-                placeholder="+1 (555) 123-4567"
+                placeholder="+91 72084-09448"
               />
             </div>
             
@@ -156,11 +156,9 @@ export function ContactForm() {
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-cc-blue-royal focus:border-transparent outline-none transition-all"
               >
                 <option value="">Select a program</option>
-                <option value="core-coaching">Core Coaching Program</option>
-                <option value="confidence-intensive">Professional Confidence Intensive</option>
+                <option value="regular-coaching">1:1 Regular Coaching (4 Sessions)</option>
+                <option value="vip-transformation">1:1 VIP Transformation (8 Sessions)</option>
                 <option value="communication-workshop">Communication Excellence Workshop</option>
-                <option value="leadership-development">Leadership Development Program</option>
-                <option value="career-comeback-mastermind">Career Comeback Mastermind</option>
                 <option value="corporate-training">Corporate Soft Skills Training</option>
                 <option value="unsure">I&apos;m not sure yet</option>
               </select>

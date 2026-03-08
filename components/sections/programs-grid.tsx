@@ -12,42 +12,38 @@ const categories = ["all", "personal", "group", "corporate"]
 
 const programs = [
   {
-    title: "Core Coaching Program",
-    slug: "core-coaching-program",
-    excerpt: "Comprehensive soft skills training designed to help professionals rediscover their confidence and excel in their career comeback journey.",
+    title: "1:1 Regular Coaching",
+    slug: "regular-coaching",
+    excerpt: "Personalized soft skills training (4 sessions) focused on confidence and career comeback.",
     category: "personal",
-    duration: "3-6 months",
-    price: "Custom pricing",
+    duration: "4 sessions",
+    price: "Rs. 10k",
     features: [
-      "Communication Skills (Speaking, Listening, Presentation)",
-      "Emotional Intelligence (Self-awareness, Self-regulation, Empathy)",
-      "Confidence Building (Self-esteem, Personal branding)",
-      "Conflict Resolution (Negotiation, Problem-solving)",
-      "Adaptability & Resilience (Change management, Stress handling)",
-      "Teamwork & Leadership (Influence, Collaboration)",
-      "Time Management & Productivity (Prioritization, Focus)",
-      "Networking & Relationship Management"
-    ],
-    icon: User,
-    popular: true
-  },
-  {
-    title: "Professional Confidence Intensive",
-    slug: "confidence-intensive",
-    excerpt: "Focused program to rebuild professional confidence and personal branding after career breaks or transitions.",
-    category: "personal",
-    duration: "2-3 months",
-    price: "from $497/month",
-    features: [
-      "Personal branding development",
-      "Confidence building exercises",
-      "Professional presence training",
-      "Career comeback strategies",
-      "Networking skills enhancement",
-      "Interview preparation"
+      "Discovery & goal setting",
+      "Confidence building blocks",
+      "Communication excellence",
+      "Career comeback strategy"
     ],
     icon: User,
     popular: false
+  },
+  {
+    title: "1:1 VIP Transformation",
+    slug: "vip-transformation",
+    excerpt: "Deep-dive intensive (8 sessions) for total professional and personal transformation.",
+    category: "personal",
+    duration: "8 sessions",
+    price: "Rs. 16k",
+    features: [
+      "Everything in Regular package",
+      "Advanced leadership skills",
+      "Emotional intelligence mastery",
+      "24/7 priority WhatsApp support",
+      "Personalized branding kit",
+      "Mock interviews & networking"
+    ],
+    icon: User,
+    popular: true
   },
   {
     title: "Communication Excellence Workshop",
@@ -55,7 +51,7 @@ const programs = [
     excerpt: "Master essential communication skills including presentation, negotiation, and professional writing.",
     category: "group",
     duration: "4-6 weeks",
-    price: "from $197/month",
+    price: "from Rs. 5k",
     features: [
       "Public speaking mastery",
       "Active listening skills",
@@ -68,53 +64,16 @@ const programs = [
     popular: false
   },
   {
-    title: "Leadership Development Program",
-    slug: "leadership-development",
-    excerpt: "Develop leadership skills and emotional intelligence to advance your career and lead teams effectively.",
-    category: "personal",
-    duration: "4-6 months",
-    price: "from $697/month",
-    features: [
-      "Leadership assessment",
-      "Emotional intelligence training",
-      "Team management skills",
-      "Strategic thinking development",
-      "Decision-making frameworks",
-      "Mentoring and coaching others"
-    ],
-    icon: User,
-    popular: false
-  },
-  {
-    title: "Career Comeback Mastermind",
-    slug: "career-comeback-mastermind",
-    excerpt: "Join a supportive community of professionals navigating career transitions and comebacks.",
-    category: "group",
-    duration: "6 months",
-    price: "from $97/month",
-    features: [
-      "Monthly group coaching sessions",
-      "Peer support network",
-      "Career transition strategies",
-      "Industry insights sharing",
-      "Accountability partnerships",
-      "Resource library access"
-    ],
-    icon: Users,
-    popular: false
-  },
-  {
     title: "Corporate Soft Skills Training",
     slug: "corporate-training",
     excerpt: "Customized soft skills training programs for organizations looking to develop their workforce.",
     category: "corporate",
     duration: "Custom",
-    price: "Custom pricing",
+    price: "Custom (INR)",
     features: [
       "Tailored curriculum design",
       "On-site or virtual delivery",
       "Team assessments",
-      "Follow-up support",
       "Performance metrics",
       "Leadership development"
     ],

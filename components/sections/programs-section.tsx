@@ -12,39 +12,23 @@ const programs = [
     title: "1-on-1 Transformation",
     subtitle: "Personal Coaching",
     icon: User,
-    price: "from $297/month",
+    price: "Rs. 10k (Regular) / Rs. 16k (VIP)",
     description: "Personalized coaching sessions designed to unlock your unique potential and accelerate your personal growth journey.",
     features: [
-      "Weekly 60-minute sessions",
+      "Regular Package: 4 sessions (Rs. 10k)",
+      "VIP Package: 8 sessions (Rs. 16k)",
       "Personalized action plans",
       "24/7 WhatsApp support",
-      "Progress tracking tools",
-      "Breakthrough strategies"
+      "Progress tracking tools"
     ],
     color: "amethyst",
-    popular: false
-  },
-  {
-    title: "Group Mastermind",
-    subtitle: "Collective Growth",
-    icon: Users,
-    price: "from $97/month",
-    description: "Join a community of like-minded individuals on a shared journey of transformation and mutual support.",
-    features: [
-      "Bi-weekly group sessions",
-      "Peer accountability",
-      "Exclusive community access",
-      "Monthly challenges",
-      "Guest expert sessions"
-    ],
-    color: "rose",
     popular: true
   },
   {
     title: "Corporate Workshops",
     subtitle: "Team Development",
     icon: Building2,
-    price: "Custom pricing",
+    price: "Custom (INR)",
     description: "Transform your organization with powerful workshops focused on leadership development and team synergy.",
     features: [
       "Custom program design",

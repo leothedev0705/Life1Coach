@@ -8,42 +8,42 @@ import { GlassCard } from "@/components/ui/glass-card"
 const testimonials = [
   {
     text: "This book completely transformed my perspective on what's possible. Anita's framework helped me break through barriers I didn't even know existed. Within 6 months, I doubled my income and found the confidence to start my dream business.",
-    author: "Sarah Chen",
+    author: "Priya Sharma",
     role: "Entrepreneur & Business Owner",
     rating: 5,
     verified: true
   },
   {
     text: "I've read countless self-help books, but none delivered results like this one. The exercises are practical, the insights are profound, and the transformation is real. This book doesn't just inspire—it creates lasting change.",
-    author: "Michael Rodriguez",
+    author: "Anjali Iyer",
     role: "Executive Director",
     rating: 5,
     verified: true
   },
   {
     text: "After feeling stuck for years, this book gave me the clarity and tools I needed to redesign my life. The step-by-step approach made transformation feel achievable rather than overwhelming. Best investment I've ever made.",
-    author: "Dr. Emily Watson",
+    author: "Dr. Kavita Rao",
     role: "Medical Professional",
     rating: 5,
     verified: true
   },
   {
     text: "Anita's writing style is engaging and her strategies are backed by real science. This isn't fluffy motivation—it's a practical blueprint for creating the life you want. Every chapter builds on the last perfectly.",
-    author: "David Park",
+    author: "Sunita Das",
     role: "Technology Leader",
     rating: 5,
     verified: true
   },
   {
     text: "As someone who struggled with self-doubt my entire career, this book was a game-changer. The confidence-building techniques alone are worth the price. I finally feel ready to pursue the leadership role I've always wanted.",
-    author: "Jessica Thompson",
+    author: "Sneha Gupta",
     role: "Marketing Manager",
     rating: 5,
     verified: true
   },
   {
     text: "This book should be required reading for anyone serious about personal growth. Anita takes complex psychological concepts and makes them accessible and actionable. The results speak for themselves—my life is unrecognizable in the best way.",
-    author: "Robert Kim",
+    author: "Rekha Nair",
     role: "Financial Advisor",
     rating: 5,
     verified: true

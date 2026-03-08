@@ -12,26 +12,17 @@ const programs = [
     title: "1-on-1 Transformation",
     subtitle: "Personal Coaching",
     icon: User,
-    price: "from $297/month",
+    price: "Rs. 10k (Regular) / Rs. 16k (VIP)",
     description: "Personalized coaching sessions designed to unlock your unique potential and accelerate your personal growth journey.",
     color: "amethyst",
-    slug: "one-on-one-transformation"
-  },
-  {
-    title: "Group Mastermind",
-    subtitle: "Collective Growth",
-    icon: Users,
-    price: "from $97/month",
-    description: "Join a community of like-minded individuals on a shared journey of transformation and mutual support.",
-    color: "rose",
-    popular: true,
-    slug: "group-mastermind"
+    slug: "one-on-one-transformation",
+    popular: true
   },
   {
     title: "Corporate Workshops",
     subtitle: "Team Development",
     icon: Building2,
-    price: "Custom pricing",
+    price: "Custom (INR)",
     description: "Transform your organization with powerful workshops focused on leadership development and team synergy.",
     color: "amethyst",
     slug: "corporate-workshops"

@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Priya Sharma",
     role: "Marketing Executive",
     image: "👩‍💼",
     rating: 5,
@@ -17,15 +17,15 @@ const testimonials = [
     achievement: "Promoted to Director in 6 months"
   },
   {
-    name: "Michael Chen",
+    name: "Riya Gupta",
     role: "Entrepreneur",
-    image: "👨‍💼",
+    image: "👩‍💼",
     rating: 5,
-    text: "Working with Anita was a game-changer. She helped me overcome limiting beliefs and scale my business to 7 figures.",
-    achievement: "Scaled business to $1M+ revenue"
+    text: "Working with Anita was a game-changer. She helped me overcome limiting beliefs and scale my business significantly.",
+    achievement: "Scaled business to 8-figure revenue"
   },
   {
-    name: "Emily Rodriguez",
+    name: "Ananya Iyer",
     role: "Creative Director",
     image: "👩‍🎨",
     rating: 5,
