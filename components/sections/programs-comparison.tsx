@@ -56,19 +56,19 @@ const comparisonData = [
 
 const programs = [
   {
-    name: "1-on-1 Coaching",
+    name: "1:1 Coaching",
     type: "personal",
-    price: "Rs. 10k",
-    period: "(Regular)",
-    description: "Personalized transformation",
+    price: "Rs. 10,000",
+    period: "Regular (4 sessions of 45 mins each)",
+    description: "Personalized transformation for career restarts",
     popular: true
   },
   {
-    name: "Corporate Workshops",
+    name: "1:1 Coaching",
     type: "corporate",
-    price: "Custom",
-    period: "INR",
-    description: "Team development",
+    price: "Rs. 18,000",
+    period: "VIP (8 sessions of 45 mins each)",
+    description: "Deep dive transformation & extended support",
     popular: false
   }
 ]

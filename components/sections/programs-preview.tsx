@@ -12,7 +12,7 @@ const programs = [
     title: "1-on-1 Transformation",
     subtitle: "Personal Coaching",
     icon: User,
-    price: "Rs. 10k (Regular) / Rs. 16k (VIP)",
+    price: "Rs. 10k (Regular - 4 sessions) / Rs. 16k (VIP - 8 sessions)",
     description: "Personalized coaching sessions designed to unlock your unique potential and accelerate your personal growth journey.",
     color: "amethyst",
     slug: "one-on-one-transformation",

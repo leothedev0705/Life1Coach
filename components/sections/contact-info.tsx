@@ -21,9 +21,9 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "anni25d@gmail.com",
+    value: "anita@comebackhub.com",
     description: "Best for direct inquiries",
-    href: "mailto:anni25d@gmail.com"
+    href: "mailto:anita@comebackhub.com"
   },
   {
     icon: Phone,

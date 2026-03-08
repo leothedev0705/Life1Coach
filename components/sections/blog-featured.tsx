@@ -7,50 +7,17 @@ import { Reveal } from "@/components/ui/reveal"
 import { GlassCard } from "@/components/ui/glass-card"
 import { Button } from "@/components/ui/button"
 
-const featuredPost = {
-  title: "5 Mindset Shifts That Will Transform Your Life in 2024",
-  slug: "mindset-shifts-transform-life-2024", 
-  excerpt: "Discover the powerful mental reframes that successful people use to overcome obstacles, accelerate growth, and create extraordinary results in every area of life.",
-  category: "Mindset",
-  author: "Anita D'Souza",
-  publishedAt: "2024-01-15",
-  readTime: "8 min read",
-  image: "/assets/blog/featured-mindset.jpg",
-  featured: true,
-  tags: ["mindset", "success", "transformation", "psychology"]
-}
-
-const recentPosts = [
-  {
-    title: "The Science of Habit Formation: A Coach's Guide",
-    slug: "science-habit-formation-guide",
-    excerpt: "Learn the neuroscience behind lasting behavior change and how to build habits that stick.",
-    category: "Personal Growth",
-    publishedAt: "2024-01-12",
-    readTime: "6 min read",
-    image: "/assets/blog/habits-science.jpg"
-  },
-  {
-    title: "Overcoming Imposter Syndrome in Leadership",
-    slug: "overcoming-imposter-syndrome-leadership",
-    excerpt: "Practical strategies to silence your inner critic and step confidently into your leadership potential.",
-    category: "Leadership",
-    publishedAt: "2024-01-10",
-    readTime: "7 min read",
-    image: "/assets/blog/imposter-syndrome.jpg"
-  },
-  {
-    title: "Creating Work-Life Integration (Not Balance)",
-    slug: "work-life-integration-not-balance",
-    excerpt: "Why work-life balance is outdated and how integration creates sustainable success and fulfillment.",
-    category: "Productivity",
-    publishedAt: "2024-01-08",
-    readTime: "5 min read",
-    image: "/assets/blog/work-life-integration.jpg"
-  }
-]
+import { allPosts } from 'contentlayer/generated'
+import { compareDesc } from 'date-fns'
+import Image from 'next/image'
 
 export function BlogFeatured() {
+  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.publishDate), new Date(b.publishDate)))
+  
+  const featuredPost = posts.find(post => post.featured) || posts[0]
+  const recentPosts = posts.filter(post => post.slug !== featuredPost.slug).slice(0, 3)
+
+  if (!featuredPost) return null
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4 lg:px-8">
@@ -83,31 +50,31 @@ export function BlogFeatured() {
                   </div>
 
                   {/* Image */}
-                  <div className="relative h-80 bg-gradient-to-br from-amethyst-100 to-rose-50 rounded-2xl mb-6 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-amethyst-500/20 to-rose-400/20" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl font-playfair font-bold text-amethyst-600/30">
-                        {featuredPost.title.split(' ')[0]}
-                      </div>
-                    </div>
+                  <div className="relative h-80 rounded-2xl mb-6 overflow-hidden">
+                    <Image 
+                      src={featuredPost.coverImage}
+                      alt={featuredPost.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
                   </div>
 
                   <div className="flex-1 flex flex-col">
                     {/* Meta */}
                     <div className="flex items-center space-x-4 mb-4">
                       <span className="px-3 py-1 bg-amethyst-100 text-amethyst-700 text-sm font-medium rounded-full">
-                        {featuredPost.category}
+                        {featuredPost.tags[0] || 'Uncategorized'}
                       </span>
                       <div className="flex items-center text-sm text-slate-500">
                         <Calendar className="w-4 h-4 mr-1" />
-                        {new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { 
+                        {new Date(featuredPost.publishDate).toLocaleDateString('en-US', { 
                           month: 'short', 
                           day: 'numeric' 
                         })}
                       </div>
                       <div className="flex items-center text-sm text-slate-500">
                         <Clock className="w-4 h-4 mr-1" />
-                        {featuredPost.readTime}
+                        {featuredPost.readingTime.text}
                       </div>
                     </div>
 
@@ -153,10 +120,13 @@ export function BlogFeatured() {
                     <GlassCard className="cursor-pointer group">
                       <div className="flex space-x-4">
                         {/* Image */}
-                        <div className="w-24 h-24 bg-gradient-to-br from-amethyst-100 to-rose-50 rounded-xl flex-shrink-0 flex items-center justify-center overflow-hidden">
-                          <div className="text-xl font-playfair font-bold text-amethyst-600/40">
-                            {post.title.split(' ')[0].charAt(0)}
-                          </div>
+                        <div className="w-24 h-24 relative rounded-xl flex-shrink-0 overflow-hidden">
+                          <Image 
+                            src={post.coverImage}
+                            alt={post.title}
+                            fill
+                            className="object-cover"
+                          />
                         </div>
 
                         {/* Content */}
@@ -164,18 +134,18 @@ export function BlogFeatured() {
                           {/* Meta */}
                           <div className="flex items-center space-x-3 mb-2">
                             <span className="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded">
-                              {post.category}
+                              {post.tags[0] || 'Uncategorized'}
                             </span>
                             <div className="flex items-center text-xs text-slate-500">
                               <Calendar className="w-3 h-3 mr-1" />
-                              {new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                              {new Date(post.publishDate).toLocaleDateString('en-US', { 
                                 month: 'short', 
                                 day: 'numeric' 
                               })}
                             </div>
                             <div className="flex items-center text-xs text-slate-500">
                               <Clock className="w-3 h-3 mr-1" />
-                              {post.readTime}
+                              {post.readingTime.text}
                             </div>
                           </div>
 

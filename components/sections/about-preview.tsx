@@ -34,7 +34,7 @@ export function AboutPreview() {
               >
                 <div className="aspect-[4/5] bg-gradient-to-br from-amethyst-100 to-rose-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative max-w-full">
                   <Image
-                    src="/assets/photos/main.jpg"
+                    src="/assets/photos/anita_portrait_about.jpg"
                     alt="Anita D&apos;Souza - Life & Success Coach"
                     fill
                     className="object-cover"

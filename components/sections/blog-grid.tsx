@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Image from "next/image"
 import { Calendar, Clock, ArrowRight, Search } from "lucide-react"
 import { Reveal } from "@/components/ui/reveal"
 import { GlassCard } from "@/components/ui/glass-card"
@@ -10,96 +11,17 @@ import { Button } from "@/components/ui/button"
 
 const categories = ["all", "mindset", "leadership", "productivity", "personal-growth", "success"]
 
-const blogPosts = [
-  {
-    title: "The Power of Morning Routines for High Achievers",
-    slug: "power-morning-routines-high-achievers",
-    excerpt: "How successful leaders start their day to maximize energy, focus, and productivity for peak performance.",
-    category: "productivity",
-    publishedAt: "2024-01-18",
-    readTime: "6 min read",
-    tags: ["routines", "productivity", "success"]
-  },
-  {
-    title: "Building Resilience: Lessons from Elite Athletes",
-    slug: "building-resilience-lessons-elite-athletes",
-    excerpt: "Discover the mental strategies that Olympic champions use to bounce back from setbacks and perform under pressure.",
-    category: "mindset",
-    publishedAt: "2024-01-16",
-    readTime: "8 min read",
-    tags: ["resilience", "mental-toughness", "performance"]
-  },
-  {
-    title: "The Art of Difficult Conversations in Leadership",
-    slug: "art-difficult-conversations-leadership",
-    excerpt: "Master the skills needed to navigate challenging discussions while maintaining relationships and driving results.",
-    category: "leadership",
-    publishedAt: "2024-01-14",
-    readTime: "7 min read",
-    tags: ["communication", "leadership", "conflict-resolution"]
-  },
-  {
-    title: "Goal Setting 2.0: Beyond SMART Goals",
-    slug: "goal-setting-beyond-smart-goals",
-    excerpt: "Why traditional goal-setting methods fall short and the advanced frameworks that actually drive transformation.",
-    category: "personal-growth",
-    publishedAt: "2024-01-12",
-    readTime: "9 min read",
-    tags: ["goals", "planning", "achievement"]
-  },
-  {
-    title: "The Psychology of Procrastination and How to Beat It",
-    slug: "psychology-procrastination-how-to-beat",
-    excerpt: "Understanding the root causes of procrastination and evidence-based strategies to overcome it permanently.",
-    category: "productivity",
-    publishedAt: "2024-01-10",
-    readTime: "6 min read",
-    tags: ["procrastination", "psychology", "productivity"]
-  },
-  {
-    title: "Creating Your Personal Board of Directors",
-    slug: "creating-personal-board-directors",
-    excerpt: "How to build a strategic network of mentors, advisors, and supporters to accelerate your growth and success.",
-    category: "success",
-    publishedAt: "2024-01-08",
-    readTime: "5 min read",
-    tags: ["networking", "mentorship", "career"]
-  },
-  {
-    title: "The Compound Effect of Small Daily Actions",
-    slug: "compound-effect-small-daily-actions",
-    excerpt: "How tiny, consistent behaviors create massive results over time and transform your life trajectory.",
-    category: "personal-growth",
-    publishedAt: "2024-01-06",
-    readTime: "7 min read",
-    tags: ["habits", "consistency", "growth"]
-  },
-  {
-    title: "Emotional Intelligence for Executive Success",
-    slug: "emotional-intelligence-executive-success",
-    excerpt: "The critical EQ skills that separate good leaders from great ones and how to develop them systematically.",
-    category: "leadership",
-    publishedAt: "2024-01-04",
-    readTime: "8 min read",
-    tags: ["emotional-intelligence", "leadership", "executive"]
-  },
-  {
-    title: "The Science of Peak Performance States",
-    slug: "science-peak-performance-states",
-    excerpt: "Research-backed techniques to access your optimal performance zone and achieve consistent excellence.",
-    category: "mindset",
-    publishedAt: "2024-01-02",
-    readTime: "10 min read",
-    tags: ["performance", "flow-state", "neuroscience"]
-  }
-]
+import { allPosts } from 'contentlayer/generated'
+import { compareDesc } from 'date-fns'
 
 export function BlogGrid() {
   const [activeCategory, setActiveCategory] = useState("all")
   const [searchQuery, setSearchQuery] = useState("")
   
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesCategory = activeCategory === "all" || post.category === activeCategory
+  const posts = allPosts.sort((a, b) => compareDesc(new Date(a.publishDate), new Date(b.publishDate)))
+
+  const filteredPosts = posts.filter(post => {
+    const matchesCategory = activeCategory === "all" || post.tags.some(tag => tag.toLowerCase() === activeCategory.toLowerCase())
     const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
@@ -168,29 +90,32 @@ export function BlogGrid() {
               >
                 <Link href={`/blog/${post.slug}`}>
                   <GlassCard className="h-full flex flex-col cursor-pointer group">
-                    {/* Image Placeholder */}
-                    <div className="h-48 bg-gradient-to-br from-amethyst-100 to-rose-50 rounded-2xl mb-6 flex items-center justify-center overflow-hidden">
-                      <div className="text-4xl font-playfair font-bold text-amethyst-600/30">
-                        {post.title.split(' ')[0].charAt(0)}
-                      </div>
+                    {/* Article Image */}
+                    <div className="h-48 relative rounded-2xl mb-6 overflow-hidden">
+                      <Image 
+                        src={post.coverImage}
+                        alt={post.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                     </div>
 
                     <div className="flex-1 flex flex-col">
                       {/* Meta */}
                       <div className="flex items-center space-x-3 mb-4">
                         <span className="px-3 py-1 bg-amethyst-100 text-amethyst-700 text-sm font-medium rounded-full capitalize">
-                          {post.category.replace("-", " ")}
+                          {post.tags[0] || 'Uncategorized'}
                         </span>
                         <div className="flex items-center text-sm text-slate-500">
                           <Calendar className="w-4 h-4 mr-1" />
-                          {new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                          {new Date(post.publishDate).toLocaleDateString('en-US', { 
                             month: 'short', 
                             day: 'numeric' 
                           })}
                         </div>
                         <div className="flex items-center text-sm text-slate-500">
                           <Clock className="w-4 h-4 mr-1" />
-                          {post.readTime}
+                          {post.readingTime.text}
                         </div>
                       </div>
 
