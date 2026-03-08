@@ -120,9 +120,9 @@ export function ProgramsComparison() {
                     {program.name}
                   </h3>
                   <p className="text-slate-600 mb-4">{program.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex flex-col items-center">
                     <span className="text-3xl font-bold text-amethyst-600">{program.price}</span>
-                    <span className="text-slate-500 ml-1">{program.period}</span>
+                    <span className="text-slate-500 mt-1">{program.period}</span>
                   </div>
                 </div>
 
@@ -166,9 +166,9 @@ export function ProgramsComparison() {
                         {program.name}
                       </h3>
                       <p className="text-sm text-slate-600 mb-3">{program.description}</p>
-                      <div className="flex items-baseline justify-center">
+                      <div className="flex flex-col items-center">
                         <span className="text-2xl font-bold text-amethyst-600">{program.price}</span>
-                        <span className="text-slate-500 text-sm ml-1">{program.period}</span>
+                        <span className="text-slate-500 text-sm mt-1">{program.period}</span>
                       </div>
                     </div>
                   ))}

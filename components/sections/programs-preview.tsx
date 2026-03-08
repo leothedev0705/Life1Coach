@@ -12,7 +12,7 @@ const programs = [
     title: "1-on-1 Transformation",
     subtitle: "Personal Coaching",
     icon: User,
-    price: "Rs. 10k (Regular - 4 sessions) / Rs. 16k (VIP - 8 sessions)",
+    price: ["Rs. 10k (Regular - 4 sessions)", "Rs. 16k (VIP - 8 sessions)"],
     description: "Personalized coaching sessions designed to unlock your unique potential and accelerate your personal growth journey.",
     color: "amethyst",
     slug: "one-on-one-transformation",
@@ -83,7 +83,11 @@ export function ProgramsPreview() {
                         <div className={`text-2xl font-bold mb-2 ${
                           program.color === 'amethyst' ? 'text-amethyst-600' : 'text-rose-600'
                         }`}>
-                          {program.price}
+                          {Array.isArray(program.price) ? (
+                            program.price.map((p, i) => <div key={i}>{p}</div>)
+                          ) : (
+                            program.price
+                          )}
                         </div>
                       </div>
 

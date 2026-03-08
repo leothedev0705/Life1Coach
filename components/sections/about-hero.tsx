@@ -28,7 +28,7 @@ export function AboutHero() {
               >
                 <div className="aspect-[4/5] bg-gradient-to-br from-amethyst-100 via-white to-rose-100 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative max-w-full">
                   <Image
-                    src="/assets/photos/About.jpg"
+                    src="/assets/photos/main3.jpeg"
                     alt="Anita D&apos;Souza - Life & Success Coach"
                     fill
                     className="object-cover"
@@ -39,7 +39,7 @@ export function AboutHero() {
                 </div>
                 
                 {/* Floating Quote */}
-                <GlassCard className="absolute -right-4 sm:-right-6 top-1/4 max-w-xs p-4 sm:p-6 hidden lg:block">
+                <GlassCard className="absolute -right-4 sm:-right-6 top-8 max-w-xs p-4 sm:p-6 hidden lg:block">
                   <p className="text-xs sm:text-sm italic text-slate-700 mb-2 sm:mb-3">
                     &quot;At The Comeback Code, every client is more than a learner—they&apos;re a story of resilience, determination, and transformation.&quot;
                   </p>
