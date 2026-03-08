@@ -21,21 +21,21 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "hello@anitadsouza.com",
-    description: "Best for detailed inquiries",
-    href: "mailto:hello@anitadsouza.com"
+    value: "anni25d@gmail.com",
+    description: "Best for direct inquiries",
+    href: "mailto:anni25d@gmail.com"
   },
   {
     icon: Phone,
-    title: "Phone",
-    value: "+1 (555) 123-4567",
-    description: "Available Mon-Fri, 9AM-5PM PST",
-    href: "tel:+15551234567"
+    title: "WhatsApp",
+    value: "+91 7208409448",
+    description: "Available for quick response",
+    href: "https://wa.me/917208409448"
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "San Francisco, CA",
+    value: "Mumbai, MH",
     description: "Virtual sessions worldwide",
     href: "#"
   }
