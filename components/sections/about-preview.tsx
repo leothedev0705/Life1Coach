@@ -68,14 +68,10 @@ export function AboutPreview() {
                 </h3>
                 <div className="space-y-3 sm:space-y-4 text-base sm:text-lg text-slate-600 leading-relaxed px-2 sm:px-0">
                   <p>
-                    With over a decade of experience in personal development, I&apos;ve dedicated 
-                    my life to helping extraordinary individuals like you break through 
-                    limitations and create lives of purpose, passion, and prosperity.
+                    With over 20 years of corporate experience spanning customer service, training, and human resources leadership, I bring deep insight into how professionals grow, communicate, and succeed in the workplace.
                   </p>
                   <p>
-                    My approach combines proven psychological principles with intuitive 
-                    coaching methods, creating a unique framework that addresses both 
-                    your inner world and external goals.
+                    My work focuses on developing the human side of professional success — communication, emotional intelligence, confidence, and leadership presence.
                   </p>
                 </div>
               </div>
@@ -90,9 +86,9 @@ export function AboutPreview() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                   >
-                    12+
+                    20+
                   </motion.div>
-                  <div className="text-xs sm:text-sm text-slate-600">Years Coaching</div>
+                  <div className="text-xs sm:text-sm text-slate-600">Years Experience</div>
                 </div>
                 <div className="text-center">
                   <motion.div 
@@ -102,9 +98,9 @@ export function AboutPreview() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    500+
+                    25k+
                   </motion.div>
-                  <div className="text-xs sm:text-sm text-slate-600">Lives Impacted</div>
+                  <div className="text-xs sm:text-sm text-slate-600">Learners Trained</div>
                 </div>
                 <div className="text-center">
                   <motion.div 

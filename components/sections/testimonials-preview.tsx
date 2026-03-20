@@ -9,28 +9,28 @@ import { Button } from "@/components/ui/button"
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    role: "Marketing Executive",
-    image: "👩‍💼",
+    name: "Aparna",
+    role: "Software Engineer",
+    image: "👩‍💻",
     rating: 5,
-    text: "Anita's coaching transformed not just my career, but my entire outlook on life. Her insights helped me land my dream job and build unshakeable confidence.",
-    achievement: "Promoted to Director in 6 months"
+    text: "Working with Anita helped me gain clarity about my goals and overcome the self-doubt that was holding me back. Her questions made me reflect deeply, and I started seeing my strengths more clearly. I now feel more confident about the direction I want to take in my life.",
+    achievement: "The coaching sessions helped me understand myself in a completely new way."
   },
   {
-    name: "Riya Gupta",
-    role: "Entrepreneur",
-    image: "👩‍💼",
+    name: "Delma",
+    role: "Coach for Children with Disabilities",
+    image: "👩‍🏫",
     rating: 5,
-    text: "Working with Anita was a game-changer. She helped me overcome limiting beliefs and scale my business significantly.",
-    achievement: "Scaled business to 8-figure revenue"
+    text: "Anita created a safe space where I could openly discuss my fears and challenges. Her calm approach and insightful questions helped me build confidence and take practical steps toward improving my personal and professional life.",
+    achievement: "I felt heard, supported, and guided."
   },
   {
-    name: "Ananya Iyer",
-    role: "Creative Director",
-    image: "👩‍🎨",
+    name: "Impact Through Training",
+    role: "20+ Years Experience",
+    image: "🏆",
     rating: 5,
-    text: "I was stuck in a creative rut and feeling unfulfilled. Anita's guidance helped me rediscover my passion and launch my own design studio.",
-    achievement: "Launched successful design agency"
+    text: "Before starting her coaching journey, Anita spent over 20 years working in training and human resource development. She trained more than 25,000 learners in communication and professional skills, designed structured soft-skills training programs, and conducted training for young professionals entering the workforce.",
+    achievement: "Trained 25,000+ Learners"
   }
 ]
 
@@ -56,11 +56,10 @@ export function TestimonialsPreview() {
         <Reveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-playfair font-bold text-slate-800 mb-6">
-              Success <span className="text-gradient">Stories</span>
+              Transformations & <span className="text-gradient">Feedback</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Real transformations from real people. Here&apos;s what our clients say 
-              about their journey to extraordinary success.
+              Over the years, Anita has worked with thousands of learners, professionals, and individuals seeking confidence, clarity, and career direction. Here are some experiences shared by people who have benefited from her coaching and training.
             </p>
           </div>
         </Reveal>

@@ -9,39 +9,111 @@ import { scrollToSection } from "@/lib/utils"
 
 const programs = [
   {
-    title: "1-on-1 Transformation",
-    subtitle: "Personal Coaching",
-    icon: User,
-    price: ["Rs. 10k (Regular)", "Rs. 16k (VIP)"],
-    description: "Personalized coaching sessions designed to unlock your unique potential and accelerate your personal growth journey.",
+    title: "Career Comeback Masterclass",
+    subtitle: "Free Masterclass",
+    icon: Users,
+    price: "Free",
+    description: "A 90 minute live masterclass designed for women who are considering restarting their careers after a break.",
     features: [
-      "Regular Package: 4 sessions (Rs. 10k)",
-      "VIP Package: 8 sessions (Rs. 16k)",
-      "Personalized action plans",
-      "24/7 WhatsApp support",
-      "Progress tracking tools"
+      "Why many women lose confidence after a career break",
+      "The biggest mistakes people make when trying to restart their careers",
+      "The 90-Day Career Comeback Roadmap"
     ],
     color: "amethyst",
-    popular: true
+    popular: false,
+    ctaText: "Register for Masterclass"
   },
   {
-    title: "Corporate Workshops",
-    subtitle: "Team Development",
-    icon: Building2,
-    price: "Custom (INR)",
-    description: "Transform your organization with powerful workshops focused on leadership development and team synergy.",
+    title: "Silver Program",
+    subtitle: "The Dignified Comeback",
+    icon: User,
+    price: "Custom",
+    description: "A foundational program designed to help women rebuild confidence and gain clarity about restarting their professional journey.",
     features: [
-      "Custom program design",
-      "On-site or virtual delivery",
-      "Leadership assessments",
-      "Team building activities",
-      "Ongoing support"
+      "Professional identity rebuilding",
+      "Communication confidence",
+      "Career direction clarity"
+    ],
+    color: "rose",
+    popular: false,
+    ctaText: "Join the Program"
+  },
+  {
+    title: "Gold Program",
+    subtitle: "Career Comeback Accelerator",
+    icon: Target,
+    price: "Custom",
+    description: "A structured program for women who are ready to actively restart their careers and position themselves professionally.",
+    features: [
+      "Resume reinvention",
+      "LinkedIn profile positioning",
+      "Interview preparation and confidence"
     ],
     color: "amethyst",
-    popular: false
+    popular: true,
+    ctaText: "Apply Now"
+  },
+  {
+    title: "Diamond Program",
+    subtitle: "Career Comeback Leadership Track",
+    icon: Building2,
+    price: "Custom",
+    description: "An advanced program designed for women who want to grow into leadership roles and mentor others in their professional journeys.",
+    features: [
+      "Executive presence",
+      "Leadership mindset",
+      "Mentoring and influence"
+    ],
+    color: "rose",
+    popular: false,
+    ctaText: "Application Required"
+  },
+  {
+    title: "90-Day Career Comeback Coaching",
+    subtitle: "Premium Coaching",
+    icon: Heart,
+    price: "Custom",
+    description: "A personalized coaching program for women who want focused guidance and accountability while restarting their careers.",
+    features: [
+      "Career strategy development",
+      "Confidence and mindset coaching",
+      "Interview preparation and positioning"
+    ],
+    color: "amethyst",
+    popular: false,
+    ctaText: "Apply for Coaching"
+  },
+  {
+    title: "Confidence & Clarity Coaching",
+    subtitle: "Personal Coaching",
+    icon: User,
+    price: ["Rs. 10,000 (4 Sessions)", "Rs. 16,000 (8 Sessions)"],
+    description: "Coaching sessions designed for individuals seeking support with confidence, communication, and life direction.",
+    features: [
+      "Confidence building",
+      "Communication skills",
+      "Life direction and clarity"
+    ],
+    color: "rose",
+    popular: false,
+    ctaText: "Book a Session"
+  },
+  {
+    title: "Corporate Training",
+    subtitle: "Organizations",
+    icon: Building2,
+    price: "Custom",
+    description: "Customized training programs for organizations focused on workplace effectiveness and professional development.",
+    features: [
+      "Communication Skills",
+      "Emotional Intelligence",
+      "Leadership Development"
+    ],
+    color: "amethyst",
+    popular: false,
+    ctaText: "Request Corporate Proposal"
   }
 ]
-
 export function ProgramsSection() {
   return (
     <section id="programs" className="py-12 sm:py-16 md:py-24 bg-lavender-50">
@@ -133,7 +205,7 @@ export function ProgramsSection() {
                       className="w-full min-h-[48px]"
                       onClick={() => scrollToSection("contact")}
                     >
-                      Get Started
+                      {program.ctaText}
                     </Button>
                   </GlassCard>
                 </motion.div>

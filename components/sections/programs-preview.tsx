@@ -2,33 +2,90 @@
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { User, Users, Building2 } from "lucide-react"
+import { User, Users, Building2, Target, Heart } from "lucide-react"
 import { Reveal } from "@/components/ui/reveal"
 import { GlassCard } from "@/components/ui/glass-card"
 import { Button } from "@/components/ui/button"
 
 const programs = [
   {
-    title: "1-on-1 Transformation",
-    subtitle: "Personal Coaching",
-    icon: User,
-    price: ["Rs. 10k (Regular - 4 sessions)", "Rs. 16k (VIP - 8 sessions)"],
-    description: "Personalized coaching sessions designed to unlock your unique potential and accelerate your personal growth journey.",
+    title: "Career Comeback Masterclass",
+    subtitle: "Free Masterclass",
+    icon: Users,
+    price: "Free",
+    description: "A 90 minute live masterclass designed for women who are considering restarting their careers after a break.",
     color: "amethyst",
-    slug: "one-on-one-transformation",
-    popular: true
+    slug: "career-comeback-masterclass",
+    popular: false,
+    ctaText: "Register for Masterclass"
   },
   {
-    title: "Corporate Workshops",
-    subtitle: "Team Development",
-    icon: Building2,
-    price: "Custom (INR)",
-    description: "Transform your organization with powerful workshops focused on leadership development and team synergy.",
+    title: "Silver Program",
+    subtitle: "The Dignified Comeback",
+    icon: User,
+    price: "Custom",
+    description: "A foundational program designed to help women rebuild confidence and gain clarity about restarting their professional journey.",
+    color: "rose",
+    slug: "silver-program",
+    popular: false,
+    ctaText: "Join the Program"
+  },
+  {
+    title: "Gold Program",
+    subtitle: "Career Comeback Accelerator",
+    icon: Target,
+    price: "Custom",
+    description: "A structured program for women who are ready to actively restart their careers and position themselves professionally.",
     color: "amethyst",
-    slug: "corporate-workshops"
+    slug: "gold-program",
+    popular: true,
+    ctaText: "Apply Now"
+  },
+  {
+    title: "Diamond Program",
+    subtitle: "Career Comeback Leadership Track",
+    icon: Building2,
+    price: "Custom",
+    description: "An advanced program designed for women who want to grow into leadership roles and mentor others in their professional journeys.",
+    color: "rose",
+    slug: "diamond-program",
+    popular: false,
+    ctaText: "Application Required"
+  },
+  {
+    title: "90-Day Career Comeback Coaching",
+    subtitle: "Premium Coaching",
+    icon: Heart,
+    price: "Custom",
+    description: "A personalized coaching program for women who want focused guidance and accountability while restarting their careers.",
+    color: "amethyst",
+    slug: "90-day-career-comeback-coaching",
+    popular: false,
+    ctaText: "Apply for Coaching"
+  },
+  {
+    title: "Confidence & Clarity Coaching",
+    subtitle: "Personal Coaching",
+    icon: User,
+    price: ["Rs. 10,000 (4 Sessions)", "Rs. 16,000 (8 Sessions)"],
+    description: "Coaching sessions designed for individuals seeking support with confidence, communication, and life direction.",
+    color: "rose",
+    slug: "confidence-and-clarity-coaching",
+    popular: false,
+    ctaText: "Book a Session"
+  },
+  {
+    title: "Corporate Training",
+    subtitle: "Organizations",
+    icon: Building2,
+    price: "Custom",
+    description: "Customized training programs for organizations focused on workplace effectiveness and professional development.",
+    color: "amethyst",
+    slug: "corporate-training",
+    popular: false,
+    ctaText: "Request Corporate Proposal"
   }
 ]
-
 export function ProgramsPreview() {
   return (
     <section className="py-16 md:py-24 bg-lavender-50">
@@ -96,12 +153,12 @@ export function ProgramsPreview() {
                         {program.description}
                       </p>
 
-                      {/* Learn More */}
+                      {/* Learn More / CTA */}
                       <div className="text-center">
                         <span className={`inline-flex items-center text-sm font-medium ${
                           program.color === 'amethyst' ? 'text-amethyst-600' : 'text-rose-600'
                         }`}>
-                          Learn More →
+                          {program.ctaText} →
                         </span>
                       </div>
                     </GlassCard>

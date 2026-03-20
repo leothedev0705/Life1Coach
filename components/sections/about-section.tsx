@@ -90,18 +90,23 @@ export function AboutSection() {
                 </h3>
                 <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
                   <p>
-                    With over a decade of experience in personal development, I&apos;ve dedicated 
-                    my life to helping extraordinary individuals like you break through 
-                    limitations and create lives of purpose, passion, and prosperity.
+                    With over <strong>20 years of corporate experience</strong> spanning customer service, training, and human resources leadership, I bring deep insight into how professionals grow, communicate, and succeed in the workplace.
                   </p>
                   <p>
-                    My approach combines proven psychological principles with intuitive 
-                    coaching methods, creating a unique framework that addresses both 
-                    your inner world and external goals.
+                    My work has focused on developing the <strong>human side of professional success</strong> — communication, emotional intelligence, confidence, and leadership presence. During my 15-year career as a soft skills trainer, I trained <strong>25,000+ software programming students and early-career professionals</strong> through NIIT’s GNIIT program.
+                  </p>
+                  <p className="font-semibold text-slate-800 mt-6 md:mt-8">Areas of Expertise</p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li><strong>Corporate Training:</strong> Communication, presentation skills, teamwork, and personal effectiveness.</li>
+                    <li><strong>Life Coaching:</strong> Emotional intelligence, mindset transformation, overcoming limiting beliefs.</li>
+                    <li><strong>Career Comebacks:</strong> Career reinvention after a break, professional identity rebuilding, interview confidence.</li>
+                  </ul>
+                  <p className="font-semibold text-slate-800 mt-6 md:mt-8">Trainer Development & HR Leadership</p>
+                  <p>
+                    As an HR leader and training professional, I played a key role in building and managing HR and T&D functions for a 500+ employee organization. I hold an MBA in Human Resources, with postgraduate research on Emotional and Spiritual Intelligence (EQ & SQ).
                   </p>
                   <p>
-                    Whether you&apos;re seeking career advancement, personal fulfillment, or 
-                    complete life transformation, I&apos;m here to guide you every step of the way.
+                    I am also the author of <strong>“Shine Beyond the Shadows: 5 Soft Skills to Help You Stand Out,”</strong> a guide focused on helping individuals develop emotional intelligence and workplace confidence.
                   </p>
                 </div>
               </div>
@@ -110,11 +115,11 @@ export function AboutSection() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-amethyst-50 rounded-2xl">
                   <div className="text-xs text-amethyst-600 font-semibold mb-1">CERTIFIED</div>
-                  <div className="text-sm font-medium text-slate-700">ICF Professional Coach</div>
+                  <div className="text-sm font-medium text-slate-700">Life by Design Life Coach</div>
                 </div>
                 <div className="text-center p-4 bg-rose-50 rounded-2xl">
-                  <div className="text-xs text-rose-600 font-semibold mb-1">SPECIALIZED</div>
-                  <div className="text-sm font-medium text-slate-700">NLP Practitioner</div>
+                  <div className="text-xs text-rose-600 font-semibold mb-1">AUTHOR</div>
+                  <div className="text-sm font-medium text-slate-700">Shine Beyond the Shadows</div>
                 </div>
               </div>
 
@@ -128,9 +133,9 @@ export function AboutSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                   >
-                    <AnimatedCounter end={12} suffix="+" />
+                    <AnimatedCounter end={20} suffix="+" />
                   </motion.div>
-                  <div className="text-sm text-slate-600">Years Coaching</div>
+                  <div className="text-sm text-slate-600">Years Experience</div>
                 </div>
                 <div className="text-center">
                   <motion.div 
@@ -140,9 +145,9 @@ export function AboutSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
-                    <AnimatedCounter end={500} suffix="+" />
+                    <AnimatedCounter end={25} suffix="k+" />
                   </motion.div>
-                  <div className="text-sm text-slate-600">Lives Impacted</div>
+                  <div className="text-sm text-slate-600">Learners Trained</div>
                 </div>
                 <div className="text-center">
                   <motion.div 

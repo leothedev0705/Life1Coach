@@ -7,44 +7,23 @@ import { GlassCard } from "@/components/ui/glass-card"
 
 const testimonials = [
   {
-    text: "This book completely transformed my perspective on what's possible. Anita's framework helped me break through barriers I didn't even know existed. Within 6 months, I doubled my income and found the confidence to start my dream business.",
-    author: "Priya Sharma",
-    role: "Entrepreneur & Business Owner",
+    text: "Working with Anita helped me gain clarity about my goals and overcome the self-doubt that was holding me back. Her questions made me reflect deeply, and I started seeing my strengths more clearly. I now feel more confident about the direction I want to take in my life.",
+    author: "Aparna",
+    role: "Software Engineer",
     rating: 5,
     verified: true
   },
   {
-    text: "I've read countless self-help books, but none delivered results like this one. The exercises are practical, the insights are profound, and the transformation is real. This book doesn't just inspire—it creates lasting change.",
-    author: "Anjali Iyer",
-    role: "Executive Director",
+    text: "Anita created a safe space where I could openly discuss my fears and challenges. Her calm approach and insightful questions helped me build confidence and take practical steps toward improving my personal and professional life.",
+    author: "Delma",
+    role: "Coach for Children with Disabilities",
     rating: 5,
     verified: true
   },
   {
-    text: "After feeling stuck for years, this book gave me the clarity and tools I needed to redesign my life. The step-by-step approach made transformation feel achievable rather than overwhelming. Best investment I've ever made.",
-    author: "Dr. Kavita Rao",
-    role: "Medical Professional",
-    rating: 5,
-    verified: true
-  },
-  {
-    text: "Anita's writing style is engaging and her strategies are backed by real science. This isn't fluffy motivation—it's a practical blueprint for creating the life you want. Every chapter builds on the last perfectly.",
-    author: "Sunita Das",
-    role: "Technology Leader",
-    rating: 5,
-    verified: true
-  },
-  {
-    text: "As someone who struggled with self-doubt my entire career, this book was a game-changer. The confidence-building techniques alone are worth the price. I finally feel ready to pursue the leadership role I've always wanted.",
-    author: "Sneha Gupta",
-    role: "Marketing Manager",
-    rating: 5,
-    verified: true
-  },
-  {
-    text: "This book should be required reading for anyone serious about personal growth. Anita takes complex psychological concepts and makes them accessible and actionable. The results speak for themselves—my life is unrecognizable in the best way.",
-    author: "Rekha Nair",
-    role: "Financial Advisor",
+    text: "Before starting her coaching journey, Anita spent over 20 years working in training and human resource development. She trained more than 25,000 learners in communication and professional skills, designed structured soft-skills training programs, and conducted training for young professionals entering the workforce.",
+    author: "Impact Through Training",
+    role: "20+ Years Experience",
     rating: 5,
     verified: true
   }
@@ -57,11 +36,10 @@ export function BookTestimonials() {
         <Reveal>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-playfair font-bold text-slate-800 mb-6">
-              What Readers Are <span className="text-gradient">Saying</span>
+              Transformations & <span className="text-gradient">Feedback</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Real transformations from real people who applied the breakthrough strategies 
-              in this life-changing book.
+              Over the years, Anita has worked with thousands of learners, professionals, and individuals seeking confidence, clarity, and career direction. Here are some experiences shared by people who have benefited from her coaching and training.
             </p>
           </div>
         </Reveal>

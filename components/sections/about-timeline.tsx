@@ -7,31 +7,31 @@ import { GlassCard } from "@/components/ui/glass-card"
 
 const timelineEvents = [
   {
-    year: "2000",
+    year: "1993",
     title: "Corporate Career Begins",
-    description: "Started corporate journey with 20+ years of experience across various leadership roles.",
+    description: "Started corporate journey with 20+ years of experience spanning across office assistant, customer service, research analyst and supervisory roles.",
     icon: Star
   },
   {
-    year: "2008",
+    year: "1998",
     title: "Soft Skills Training Expertise", 
-    description: "Began specializing in soft skills training and leadership development, helping professionals excel.",
+    description: "Began specializing in soft skills training and leadership development, facilitating GNIIT students in Effective Communication and Personality Development and then further moved into the role of corporate trainer with organisations she later joined.",
     icon: Award
   },
   {
-    year: "2015",
+    year: "2013",
     title: "Family Sabbatical",
     description: "Chose to focus on family for over a decade, experiencing the challenges of career breaks firsthand.",
     icon: Calendar
   },
   {
-    year: "2020",
+    year: "2024",
     title: "The Comeback Journey",
     description: "Faced the challenge of returning to professional life with confidence and clarity after career break.",
     icon: Star
   },
   {
-    year: "2023",
+    year: "2025",
     title: "Founded The Comeback Code",
     description: "Created The Comeback Code to help professionals rediscover their confidence and excel in their careers.",
     icon: Award
